@@ -1,0 +1,10 @@
+{
+  "include": ["./src/**/*", "server.js"],
+
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
