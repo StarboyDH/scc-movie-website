@@ -6,22 +6,28 @@
       الموقع، ومشاركة رأيك واقترحاتك وإضافتك، من خلال إرسال رسالتك إلينا عبر ملئ
       النموذج أدناه:
     </p>
-    <form name="conatct-us-form" method="POST">
+    <form action="https://formsubmit.co/oscar.dh.95@gmail.com" method="POST">
+      <!-- We use https://formsubmit.co as a backend for this form -->
+
+      <!-- First name field  -->
       <div class="form-block first-name-block">
         <label for="first-name">الاسم الأول</label>
-        <input class="contact-input first-name" name="first-name" type="text" />
+        <input class="contact-input first-name" name="firstName" type="text" />
       </div>
 
+      <!-- Lirst name field  -->
       <div class="form-block last-name-block">
         <label for="last-name">الاسم الثاني</label>
-        <input class="contact-input last-name" name="last-name" type="text" />
+        <input class="contact-input last-name" name="lastName" type="text" />
       </div>
 
+      <!-- Client's email field  -->
       <div class="form-block email-block">
         <label for="email">البريد الإلكتروني</label>
         <input class="contact-input email" name="email" type="email" />
       </div>
 
+      <!-- Massage field -->
       <div class="form-block massage-block">
         <span>
           <label for="massage">رسالتك</label>
@@ -38,6 +44,31 @@
           ref="textarea"
         ></textarea>
       </div>
+
+      <!-- formsubmit.co features -->
+      <!-- Email subject -->
+      <input
+        type="hidden"
+        name="_subject"
+        value="New massage from SCC website!"
+      />
+
+      <!-- Autoresponse -->
+      <input
+        type="hidden"
+        name="_autoresponse"
+        value="شكراً لتواصلكم معنا.\n\nالنادي  السينمائي السوري"
+      />
+
+      <!-- Redirect page when form is submitted -->
+      <input
+        type="hidden"
+        name="_next"
+        value="https://yourdomain.co/thanks.html"
+      />
+
+      <!-- Email massage template -->
+      <input type="hidden" name="_template" value="box" />
 
       <button class="submit-btn" type="submit">أرســـــل</button>
     </form>
