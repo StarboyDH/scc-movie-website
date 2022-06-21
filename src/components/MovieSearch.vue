@@ -19,7 +19,6 @@ export default {
   props: {
     title: String,
     type: String,
-    apiKey: String,
   },
 
   emits: ["movieId", "seriesId"],
@@ -39,7 +38,7 @@ export default {
   methods: {
     async getMovieId() {
       const res = await fetch(
-        `https://imdb-api.com/en/API/SearchMovie/${this.apiKey}/${this.movieTitle}`
+        `https://imdb-api.com/en/API/SearchMovie/k_8b8mpvoc/${this.movieTitle}`
       );
 
       this.data = await res.json();
@@ -50,7 +49,7 @@ export default {
 
     async getSeriesId() {
       const res = await fetch(
-        `https://imdb-api.com/en/API/SearchSeries/${this.apiKey}/${this.seriesTitle}`
+        `https://imdb-api.com/en/API/SearchSeries/k_8b8mpvoc/${this.seriesTitle}`
       );
 
       this.sData = await res.json();

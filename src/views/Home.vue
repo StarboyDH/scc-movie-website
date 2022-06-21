@@ -6,7 +6,6 @@
     <MovieSearch
       :type="userType"
       :title="userTitle"
-      :apiKey="API_KEY"
       @movieId="(e) => (userId = e)"
       @seriesId="(e) => (userId = e)"
     />
@@ -14,7 +13,7 @@
       @type="(e) => (userType = e)"
       @source="(e) => (userTitle = e)"
     />
-    <MovieDetails :id="userId" :apiKey="API_KEY" />
+    <MovieDetails :id="userId" />
   </main>
 </template>
 
@@ -22,7 +21,6 @@
 import MovieSearch from "../components/MovieSearch.vue";
 import MovieDetails from "../components/MovieDetails.vue";
 import QuotesGenerator from "../components/QuotesGenerator.vue";
-import STORED_API_KEY from "../config.js";
 
 export default {
   name: "Home",
@@ -34,8 +32,6 @@ export default {
 
   data() {
     return {
-      API_KEY: STORED_API_KEY.API_KEY,
-
       userType: null,
       userTitle: null,
       userId: null,

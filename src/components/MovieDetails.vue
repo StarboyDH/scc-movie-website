@@ -44,7 +44,6 @@ export default {
   name: "MovieDetails",
   props: {
     id: String,
-    apiKey: String,
   },
 
   data() {
@@ -70,7 +69,7 @@ export default {
   methods: {
     async getInfo() {
       const res = await fetch(
-        `https://imdb-api.com/en/API/Title/${this.apiKey}/${this.id}/Images,Ratings,`
+        `https://imdb-api.com/en/API/Title/k_8b8mpvoc/${this.id}/Images,Ratings,`
       );
 
       this.data = await res.json();
